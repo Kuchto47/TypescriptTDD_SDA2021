@@ -33,6 +33,6 @@
 * Tree Height 7
 */
 
-export function tree() {
-    
+export function tree(height: number): string[] {
+    return ["#", "#"];
 }
