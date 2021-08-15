@@ -7,7 +7,10 @@ describe("xMasTree", () => {
             expect(tree(0).length).to.equal(2);
         });
         it("returns trunk only", () => {
-            expect(tree(0)).to.deep.equal(["#", "#"]);
+            expect(tree(0)).to.deep.equal([
+                "#",
+                "#"
+            ]);
         });
     });
 
@@ -17,7 +20,11 @@ describe("xMasTree", () => {
         });
 
         it("has trunk and 1 level", () => {
-            expect(tree(1)).to.deep.equal(["#", "#", "#"]);
+            expect(tree(1)).to.deep.equal([
+                "#",
+                "#",
+                "#"
+            ]);
         });
     });
 
@@ -31,7 +38,12 @@ describe("xMasTree", () => {
         });
 
         it("draws expected tree", () => {
-            expect(tree(2)).to.deep.equal(["_#_", "###", "_#_", "_#_"]);
+            expect(tree(2)).to.deep.equal([
+                "_#_",
+                "###",
+                "_#_",
+                "_#_"
+            ]);
         });
     });
 });
