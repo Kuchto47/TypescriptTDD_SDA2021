@@ -34,5 +34,5 @@
 */
 
 export function fizzBuzz(number: number): string {
-   return number == 1 ? "1" : "2";
+   return number.toString();
 }
