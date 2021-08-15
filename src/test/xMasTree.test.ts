@@ -25,5 +25,13 @@ describe("xMasTree", () => {
         it("first element is '_#_'", () => {
             expect(tree(2)[0]).to.equal("_#_");
         });
+
+        it("has 4 elements", () => {
+            expect(tree(2).length).to.equal(4);
+        });
+
+        it("draws expected tree", () => {
+            expect(tree(2)).to.deep.equal(["_#_", "###", "_#_", "_#_"]);
+        });
     });
 });
