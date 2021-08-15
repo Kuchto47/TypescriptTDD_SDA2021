@@ -33,6 +33,6 @@
      * Allowed numbers are 1-100. Anything below 1 or above 100 has undefined behavior.
 */
 
-export function fizzBuzz() {
-    
+export function fizzBuzz(number: number): string {
+    return "1";
 }
