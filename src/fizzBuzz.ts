@@ -34,5 +34,9 @@
 */
 
 export function fizzBuzz(number: number): string {
-   return number.toString();
+   let result: string = "";
+   if (number % 3 === 0) result += "Fizz";
+   if (number % 5 === 0) result += "Buzz";
+   if (result.length === 0) result = number.toString();
+   return result;
 }
