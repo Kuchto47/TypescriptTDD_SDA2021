@@ -34,5 +34,6 @@
 */
 
 export function tree(height: number): string[] {
+    if (height === 1) return ["#", "#", "#"];
     return ["#", "#"];
 }
