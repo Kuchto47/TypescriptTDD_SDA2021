@@ -36,7 +36,7 @@
 export function tree(height: number): string[] {
     const createTrunkLevel = (): string => height < 1 ? "#" : createTreeLevel(1);
     const createTreeLevel = (level: number): string => {
-        const padding: string = `${"_".repeat(height - 1 - level + 1)}`;
+        const padding: string = `${"_".repeat(height - level)}`;
         const core: string = `${"#".repeat(level * 2 - 1)}`;
         return `${padding}${core}${padding}`;
     }
