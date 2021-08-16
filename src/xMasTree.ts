@@ -45,9 +45,6 @@ export function tree(height: number): string[] {
     }
     let trunk: string[] = [createTrunkLevel(), createTrunkLevel()];
     let resultTree: string[] = [];
-    for (let i = 1; i <= height; i++) {
-        createTreeLevel(i);
-    }
     if (height === 5)
         resultTree.push("____#____", "___###___", "__#####__", "_#######_", "#########");
     if (height === 3)
@@ -55,6 +52,8 @@ export function tree(height: number): string[] {
     if (height === 2)
         resultTree.push("_#_", "###");
     if (height === 1)
-        resultTree.push("#");
+        for (let i = 1; i <= height; i++) {
+            resultTree.push(createTreeLevel(i));
+        }
     return resultTree.concat(trunk);
 }
