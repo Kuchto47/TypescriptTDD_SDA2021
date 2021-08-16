@@ -34,10 +34,14 @@
 */
 
 export function tree(height: number): string[] {
-    const createTrunkLevel = (): string => 
-        height < 1 ?
-        "#" :
-        `${"_".repeat(height - 1)}#${"_".repeat(height - 1)}`;
+    const createTrunkLevel = (): string => {
+        if (height < 1) {
+            return "#";
+        }
+        const padding: string = `${"_".repeat(height - 1)}`;
+        return `${padding}#${padding}`;
+    }
+        
     const createTreeLevel = (level: number): string => {
         const padding: string = `${"_".repeat(height - 1 - level + 1)}`;
         const core: string = `${"#".repeat(level * 2 - 1)}`;
