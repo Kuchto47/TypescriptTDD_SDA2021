@@ -38,8 +38,16 @@ export function tree(height: number): string[] {
         height < 1 ?
         "#" :
         `${"_".repeat(height - 1)}#${"_".repeat(height - 1)}`;
+    const createTreeLevel = (level: number): string => {
+        const padding: string = `${"_".repeat(height - 1 - level + 1)}`;
+        const core: string = `${"#".repeat(level * 2 - 1)}`;
+        return `${padding}${core}${padding}`;
+    }
     let trunk: string[] = [createTrunkLevel(), createTrunkLevel()];
     let resultTree: string[] = [];
+    for (let i = 1; i <= height; i++) {
+        createTreeLevel(i);
+    }
     if (height === 5)
         resultTree.push("____#____", "___###___", "__#####__", "_#######_", "#########");
     if (height === 3)
