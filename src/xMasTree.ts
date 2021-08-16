@@ -50,7 +50,9 @@ export function tree(height: number): string[] {
     if (height === 3)
         resultTree.push("__#__", "_###_", "#####");
     if (height === 2)
-        resultTree.push("_#_", "###");
+        for (let i = 1; i <= height; i++) {
+            resultTree.push(createTreeLevel(i));
+        }
     if (height === 1)
         for (let i = 1; i <= height; i++) {
             resultTree.push(createTreeLevel(i));
