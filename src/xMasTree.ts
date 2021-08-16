@@ -45,21 +45,8 @@ export function tree(height: number): string[] {
     }
     let trunk: string[] = [createTrunkLevel(), createTrunkLevel()];
     let resultTree: string[] = [];
-    if (height === 5)
-        for (let i = 1; i <= height; i++) {
-            resultTree.push(createTreeLevel(i));
-        }
-    if (height === 3)
-        for (let i = 1; i <= height; i++) {
-            resultTree.push(createTreeLevel(i));
-        }
-    if (height === 2)
-        for (let i = 1; i <= height; i++) {
-            resultTree.push(createTreeLevel(i));
-        }
-    if (height === 1)
-        for (let i = 1; i <= height; i++) {
-            resultTree.push(createTreeLevel(i));
-        }
+    for (let i = 1; i <= height; i++) {
+        resultTree.push(createTreeLevel(i));
+    }
     return resultTree.concat(trunk);
 }
