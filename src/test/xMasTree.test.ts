@@ -46,4 +46,20 @@ describe("xMasTree", () => {
             ]);
         });
     });
+
+    describe("height 3", () => {
+        it("first element is '__#__'", () => {
+            expect(tree(3)[0]).to.equal("__#__");
+        });
+
+        it("draws expected tree", () => {
+            expect(tree(3)).to.deep.equal([
+                "__#__",
+                "_###_",
+                "#####",
+                "__#__",
+                "__#__"
+            ]);
+        });
+    });
 });

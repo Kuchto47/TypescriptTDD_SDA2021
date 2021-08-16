@@ -37,8 +37,12 @@ export function tree(height: number): string[] {
     let trunk: string[], resultTree: string[] = [];
     if (height <= 1)
         trunk = ["#", "#"];
-    else
+    else if (height === 2)
         trunk = ["_#_", "_#_"];
+    else
+        trunk = ["__#__", "__#__"];
+    if (height === 3)
+        resultTree.push("__#__", "_###_", "#####");
     if (height === 2)
         resultTree.push("_#_", "###");
     if (height === 1)
