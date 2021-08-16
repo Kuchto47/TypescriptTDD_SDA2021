@@ -34,10 +34,10 @@
 */
 
 export function tree(height: number): string[] {
-    let trunk: string[], resultTree: string[] = [];
     const createTrunkLevel = (): string => {
         return height < 1 ? "#" : `${"_".repeat(height - 1)}#${"_".repeat(height - 1)}`;
     };
+    let trunk: string[], resultTree: string[] = [];
     trunk = [createTrunkLevel(), createTrunkLevel()];
     if (height === 3)
         resultTree.push("__#__", "_###_", "#####");
