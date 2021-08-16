@@ -18,19 +18,7 @@
     #####          ----->  3 - Height of Tree
     __#__           1
     __#__           2 - Trunk/Stem of Tree
-
-* Testing ideas:
-* Trunk Only "#", "#"
-* Tree Height 1 "#", "#", "#"
-* Tree Height 2 "_#_", "###", "_#_", "_#_" (skip -> „fix padding first“)
-* Tree Height 2 Top Level "_#_“
-* Tree Height 3 Top Level "__#__“
-* Tree Height 2 2nd Top Level "###“
-* Tree Height 2 (unskip)
-* Tree Height 3 "__#__", "_###_", "#####", "__#__", "__#__" // not necessary (skip ->„fix tree body first“)
-*   (Tree Height 3 3rd Top Level "#####")
-* TreeHeight 5
-* Tree Height 7
+* PLACEHOLDER for testing ideas if requested...
 */
 
 export function tree() {
