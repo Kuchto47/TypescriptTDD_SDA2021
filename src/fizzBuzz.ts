@@ -33,6 +33,16 @@
      * Allowed numbers are 1-100. Anything below 1 or above 100 has undefined behavior.
 */
 
-export function fizzBuzz() {
-    
+export function fizzBuzz(number: number): string {
+   if(number % 15 == 0){
+      return 'FizzBuzz';
+   }
+
+   if (number % 3 === 0) {
+      return 'Fizz';
+   }
+   if (number %  5 === 0){
+      return 'Buzz';
+   }
+   return number.toString();
 }
